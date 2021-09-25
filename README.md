@@ -14,4 +14,4 @@ npm start
 
 ## Live Demo
 
-https://sheameyers.com/salary-breakdown/
+https://salary-breakdown.sheameyers.com/
