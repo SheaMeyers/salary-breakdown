@@ -263,6 +263,8 @@ const Wage: React.FC = () => {
         <div className="Wage">
             <Card className={classes.card}>
                 <CardContent className={classes.cardContent}>
+                    <h1 style={{margin: 0}}>Salary Breakdown</h1>
+                    <h2 style={{margin: 0}}>See Your Salary in Different Amounts</h2>
                     <TextField
                         id="outlined-year"
                         label="Salary per year"

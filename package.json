@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "repository": "https://github.com/SheaMeyers/salary-breakdown.git",
-  "homepage": "http://sheameyers.github.io/salary-breakdown",
+  "homepage": "https://salary-breakdown.sheameyers.com",
   "dependencies": {
     "@material-ui/core": "^4.5.1",
     "@material-ui/icons": "^4.9.1",
