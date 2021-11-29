@@ -37,7 +37,7 @@ type StateType = {
 }
 
 
-type ActionType = {
+export type ActionType = {
     type: string
     newValue: string,
     hoursWorkedPerWeekString: string,
@@ -58,7 +58,7 @@ const initialState: StateType = {
 };
 
 
-const yearReducer = (action: ActionType) => {
+export const yearReducer = (action: ActionType) => {
     return {
         salaryPerYear: action.newValue,
         salaryPerMonth: (parseFloat(action.newValue)/monthsPerYear).toFixed(2),
@@ -73,7 +73,7 @@ const yearReducer = (action: ActionType) => {
 };
 
 
-const monthReducer = (action: ActionType) => {
+export const monthReducer = (action: ActionType) => {
     return {
         salaryPerYear: (parseFloat(action.newValue) * monthsPerYear).toFixed(2),
         salaryPerMonth: action.newValue,
@@ -88,7 +88,7 @@ const monthReducer = (action: ActionType) => {
 };
 
 
-const twoWeekReducer = (action: ActionType) => {
+export const twoWeekReducer = (action: ActionType) => {
     return {
         salaryPerYear: (parseFloat(action.newValue) * twoWeekPeriodsPerYear).toFixed(2),
         salaryPerMonth: (parseFloat(action.newValue) * weeksPerMonth).toFixed(2),
@@ -103,7 +103,7 @@ const twoWeekReducer = (action: ActionType) => {
 };
 
 
-const weekReducer = (action: ActionType) => {
+export const weekReducer = (action: ActionType) => {
     return {
         salaryPerYear: (parseFloat(action.newValue) * weeksPerYear).toFixed(2),
         salaryPerMonth: (parseFloat(action.newValue) * weeksPerMonth).toFixed(2),
@@ -118,7 +118,7 @@ const weekReducer = (action: ActionType) => {
 };
 
 
-const hourReducer = (action: ActionType) => {
+export const hourReducer = (action: ActionType) => {
     return {
         salaryPerYear: (parseFloat(action.newValue) * weeksPerYear * parseInt(action.hoursWorkedPerWeekString) - parseInt(action.hoursWorkedPerWeekString) * parseInt(action.hoursWorkedPerWeekString)).toFixed(2),
         salaryPerMonth: (parseFloat(action.newValue) * weeksPerMonth * parseInt(action.hoursWorkedPerWeekString) - parseInt(action.hoursWorkedPerWeekString) * (parseInt(action.hoursWorkedPerWeekString)/monthsPerYear)).toFixed(2),
