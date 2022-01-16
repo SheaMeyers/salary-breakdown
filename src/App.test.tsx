@@ -17,19 +17,19 @@ describe('Tests that reducer and function work properly', () => {
             type: 'year',
             newValue: '100000',
             hoursWorkedPerWeekString: '40',
-            weeksVacationPerYearString: '5',
+            daysVacationPerYearString: '20',
         }
         const result = yearReducer(fakeAction);
         expect(result).toStrictEqual({
             "hoursWorkedPerWeekString": "40",
             "lastChangedType": "year",
             "lastChangedValue": "100000",
-            "salaryPerHour": "53.19",
+            "salaryPerHour": "52.08",
             "salaryPerMonth": "8333.33",
             "salaryPerTwoWeeks": "3846.15",
             "salaryPerWeek": "1923.08",
             "salaryPerYear": "100000",
-            "weeksVacationPerYearString": "5",
+            "daysVacationPerYearString": "20",
         });
     })
 
@@ -38,19 +38,19 @@ describe('Tests that reducer and function work properly', () => {
             type: 'month',
             newValue: '10000',
             hoursWorkedPerWeekString: '40',
-            weeksVacationPerYearString: '5',
+            daysVacationPerYearString: '20',
         }
         const result = monthReducer(fakeAction);
         expect(result).toStrictEqual({
             "hoursWorkedPerWeekString": "40",
             "lastChangedValue": "10000",
             "lastChangedType": "month",
-            "salaryPerHour": "64.38",
+            "salaryPerHour": "63.03",
             "salaryPerMonth": "10000",
             "salaryPerTwoWeeks": "4608.29",
             "salaryPerWeek": "2325.58",
             "salaryPerYear": "120000.00",
-            "weeksVacationPerYearString": "5",
+            "daysVacationPerYearString": "20",
         });
     })
 
@@ -59,19 +59,19 @@ describe('Tests that reducer and function work properly', () => {
             type: 'two weeks',
             newValue: '1000',
             hoursWorkedPerWeekString: '40',
-            weeksVacationPerYearString: '5',
+            daysVacationPerYearString: '20',
         }
         const result = twoWeekReducer(fakeAction);
         expect(result).toStrictEqual({
             "hoursWorkedPerWeekString": "40",
             "lastChangedType": "two weeks",
             "lastChangedValue": "1000",
-            "salaryPerHour": "13.83",
+            "salaryPerHour": "13.54",
             "salaryPerMonth": "4300.00",
             "salaryPerTwoWeeks": "1000",
             "salaryPerWeek": "500.00",
             "salaryPerYear": "26000.00",
-            "weeksVacationPerYearString": "5",
+            "daysVacationPerYearString": "20",
         });
     })
 
@@ -80,28 +80,28 @@ describe('Tests that reducer and function work properly', () => {
             type: 'week',
             newValue: '1000',
             hoursWorkedPerWeekString: '40',
-            weeksVacationPerYearString: '5',
+            daysVacationPerYearString: '20',
         }
         const result = weekReducer(fakeAction);
         expect(result).toStrictEqual({
             "hoursWorkedPerWeekString": "40",
             "lastChangedType": "week",
             "lastChangedValue": "1000",
-            "salaryPerHour": "27.66",
+            "salaryPerHour": "27.08",
             "salaryPerMonth": "4300.00",
             "salaryPerTwoWeeks": "2000.00",
             "salaryPerWeek": "1000",
             "salaryPerYear": "52000.00",
-            "weeksVacationPerYearString": "5",
+            "daysVacationPerYearString": "20",
         });
     })
 
-    it('weekReducer returns correct object', () => {
+    it('hourReducer returns correct object', () => {
         const fakeAction: ActionType = {
             type: 'hour',
             newValue: '10',
             hoursWorkedPerWeekString: '40',
-            weeksVacationPerYearString: '5',
+            daysVacationPerYearString: '20',
         }
         const result = hourReducer(fakeAction);
         expect(result).toStrictEqual({
@@ -113,7 +113,7 @@ describe('Tests that reducer and function work properly', () => {
             "salaryPerTwoWeeks": "738.46",
             "salaryPerWeek": "369.23",
             "salaryPerYear": "19200.00",
-            "weeksVacationPerYearString": "5",
+            "daysVacationPerYearString": "20",
         });
     })
 })
